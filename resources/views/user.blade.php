@@ -2,6 +2,10 @@
 
 @section('title', 'Layout Usuário')
 
+@push('scripts')
+    <script src="{{asset('js/app.js')}}"></script>
+@endpush
+
 @section('sidebar')
 <div>
     <nav>
@@ -14,6 +18,4 @@
 <h1>Welcome, {{$user->name}}</h1>
 @endsection
 
-@push('scripts')
-    <script src="{{asset('js/app.js')}}"></script>
-@endpush
+
