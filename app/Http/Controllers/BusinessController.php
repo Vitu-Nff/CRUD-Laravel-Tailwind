@@ -7,18 +7,11 @@ use Illuminate\Http\Request;
 class BusinessController extends Controller
 {
     public function index() {
-
-        $businesses = Business::all();
-       // dd($businesses);
-
         $business = Business::find(1);
-       // dd($business);
-
-        $businessWhere = Business::where('name', 'Jenkins Group')->get();
-
-        $businessWhereFirst = Business::where('name', 'Jenkins Group')->first();
-
-        dd($businessWhereFirst, $businessWhere, $business, $businesses);
-
+//        $business->name = 'Tiago';
+//        $business->email = 'tiago@laravel.com.br';
+//        $business->address = 'Rua Às, N 27';
+//        $business->save();
+        dd($business);
     }
 }
