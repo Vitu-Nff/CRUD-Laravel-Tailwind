@@ -18,7 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('posts', [\App\Http\Controllers\PostController::class, 'index'])->name('post.index');
 Route::get('posts/{post}', [\App\Http\Controllers\PostController::class, 'show'])->name('post.show');
 
-Route::get('businesses', [BusinessController::class,'index']);
+Route::get('businesses', [BusinessController::class,'index'])->name('businesses.index');
+Route::post('businesses', [BusinessController::class,'store'])->name('businesses.store');
+
 Route::get('/users/{user}', [UserController::class, 'show'])->name('users.show');
 
 Route::get('/', function () {

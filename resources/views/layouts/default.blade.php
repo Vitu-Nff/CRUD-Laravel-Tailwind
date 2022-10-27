@@ -11,11 +11,6 @@
 </head>
 <body>
 
-<div>
-    <h1> Meu layout </h1>
-</div>
-
-
 @yield('content')
 
 @section('sidebar')
