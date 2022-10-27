@@ -1,15 +1,2 @@
-body {
-    color: orange;
-    background: black;
-}
-
-div {
-    font-size: 14px;
-}
-
-h1 {
-    font-size: 32px;
-    color: green;
-}
-
+body{background:#000;color:orange}div{font-size:14px}h1{color:green;font-size:32px}
 
