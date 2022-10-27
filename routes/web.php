@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BusinessController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,9 +18,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'show'])->name('home.show');
+Route::get('/', [HomeController::class, 'show'])->name('home');
 
+Route::get('/products/{product?}', [ProductsController::class, 'show'])->name('products.show');
 
+Route::get('/admin/',[AdminController::class, 'index'])->name('admin.index');
+Route::get('/admin/edit/{productId?}', [AdminController::class, 'edit'])->name('admin.edit');
 //Estudos
 
 //Route::get('posts', [\App\Http\Controllers\PostController::class, 'index'])->name('post.index');
