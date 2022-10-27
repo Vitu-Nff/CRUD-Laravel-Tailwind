@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Redirect;
 class BusinessController extends Controller
 {
     public function index() {
-        $businesses = Business::all();
+        $businesses = Business::paginate(2);
         return view('businesses', compact('businesses'));
     }
 

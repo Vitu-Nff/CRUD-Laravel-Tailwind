@@ -62,4 +62,5 @@
 
     @endforeach
 
+    {{ $businesses->links() }}
 @endsection
