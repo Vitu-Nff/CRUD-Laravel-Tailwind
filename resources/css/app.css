@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.product_card {
+    border-radius: 30px;
+    transition: 0.5s;
+    transform: scale(1);
+    border: 1px solid rgba(0, 155, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.product_card:hover {
+    transform: scale(1.035);
+    border: 1px solid rgba(0, 155, 255, 0.35);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.hoverScale {
+    transition: 0.5s;
+    transform: scale(1);
+}
+
+.hoverScale:hover{
+    transform: scale(1.035);
+}
+
+.floatIn{
+    animation: floatInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes floatInAnimation {
+    0% {
+        transform: translateY(5em);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+

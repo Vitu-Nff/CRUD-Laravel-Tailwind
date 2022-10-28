@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Redirect;
 
 class AdminController extends Controller
 {
@@ -22,4 +25,16 @@ class AdminController extends Controller
             return redirect()->route('admin.index');
         }
     }
+
+    public function delete($productId = null)
+    {
+        if (!is_null($productId)) {
+            //DB::table('products')->where('id', '=' , $productId)->delete();
+            Log::info($productId);
+        } else {
+            return view('admin.index');
+        }
+    }
+
+
 }

@@ -24,6 +24,7 @@ Route::get('/products/{product?}', [ProductsController::class, 'show'])->name('p
 
 Route::get('/admin/',[AdminController::class, 'index'])->name('admin.index');
 Route::get('/admin/edit/{productId?}', [AdminController::class, 'edit'])->name('admin.edit');
+Route::post('/admin/delete/{productId?}', [AdminController::class, 'delete'])->name('admin.delete');
 //Estudos
 
 //Route::get('posts', [\App\Http\Controllers\PostController::class, 'index'])->name('post.index');

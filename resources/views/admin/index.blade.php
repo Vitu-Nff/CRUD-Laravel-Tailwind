@@ -19,7 +19,8 @@
                     <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">Nome</th>
                     <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">Valor</th>
                     <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">Estoque</th>
-                    <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-center text-sm bg-gray-800 rounded-br">Ações</th>
+                    <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">Ações</th>
+                    <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-center text-sm bg-gray-800 rounded-br"></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -27,12 +28,17 @@
                    <tr>
                        <td class="px-4 py-3">{{$product->id}}</td>
                        <td class="px-4 py-3">
-                           <div class="bg-contain bg-center "> <img width=50px src="{{$product->photo}}"> </div>
+                           <div class="bg-contain bg-center "> <img class="rounded" width=50px src="{{$product->photo}}"> </div>
                        </td>
                        <td class="px-4 py-3">{{$product->name}}</td>
                        <td class="px-4 py-3">R${{number_format($product->price, 2)}}</td>
                        <td class="px-4 py-3">{{$product->estoque}}</td>
-                       <td class="w-10 text-center text-blue-600"><div><a class="px-4 py-3" >Editar</a><a class="px-4 py-3">Deletar</a></div></td>
+                       <td class="w-10 text-center text-blue-600">
+                           <a href="{{url('/edit/'.$product->id)}}" class="inline px-4 py-3" >Editar</a>
+                       </td>
+                       <td class="w-10 text-center text-orange text-orange-400">
+                               <button id="delete" onclick="deleteProduct({{$product->id}})"><a class="inline px-4 py-3">Deletar</a></button>
+                       </td>
                    </tr>
                @endforeach
                 </tbody>
