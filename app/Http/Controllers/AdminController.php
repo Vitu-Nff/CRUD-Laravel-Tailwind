@@ -29,8 +29,8 @@ class AdminController extends Controller
     public function delete($productId = null)
     {
         if (!is_null($productId)) {
-            //DB::table('products')->where('id', '=' , $productId)->delete();
-            Log::info($productId);
+            DB::table('products')->where('id', '=' , $productId)->delete();
+            return redirect()->route('admin.index');
         } else {
             return view('admin.index');
         }

@@ -25,7 +25,7 @@
                 </thead>
                 <tbody>
                @foreach($products as $product)
-                   <tr>
+                   <tr class="" id="product_{{$product->id}}">
                        <td class="px-4 py-3">{{$product->id}}</td>
                        <td class="px-4 py-3">
                            <div class="bg-contain bg-center "> <img class="rounded" width=50px src="{{$product->photo}}"> </div>
@@ -34,10 +34,10 @@
                        <td class="px-4 py-3">R${{number_format($product->price, 2)}}</td>
                        <td class="px-4 py-3">{{$product->estoque}}</td>
                        <td class="w-10 text-center text-blue-600">
-                           <a href="{{url('/edit/'.$product->id)}}" class="inline px-4 py-3" >Editar</a>
+                           <a href="{{url('admin/edit/'.$product->id)}}" class="inline px-4 py-3" >Editar</a>
                        </td>
                        <td class="w-10 text-center text-orange text-orange-400">
-                               <button id="delete" onclick="deleteProduct({{$product->id}})"><a class="inline px-4 py-3">Deletar</a></button>
+                               <button id="delete" onclick="deleteProduct({{$product->id}})"><a href="{{url('admin/delete/'.$product->id)}}" class="inline px-4 py-3">Deletar</a></button>
                        </td>
                    </tr>
                @endforeach
