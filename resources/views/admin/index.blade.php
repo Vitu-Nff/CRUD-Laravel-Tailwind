@@ -23,16 +23,18 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td class="px-4 py-3">#1</td>
-                    <td class="px-4 py-3">
-                        <div class="bg-contain bg-center" style="background-image: url('{{ Illuminate\Support\Facades\Storage::disk("public")->url('/logos/h7RLzsHBZxRPucGASDlsyblynv5kJqzJZRSNwLN8.png')}})"></div>
-                    </td>
-                    <td class="px-4 py-3">Teste</td>
-                    <td class="px-4 py-3">R$99,90</td>
-                    <td class="px-4 py-3">8</td>
-                    <td class="w-10 text-center text-blue-600"><div><a class="px-4 py-3" >Editar</a><a class="px-4 py-3">Deletar</a></div></td>
-                </tr>
+               @foreach($products as $product)
+                   <tr>
+                       <td class="px-4 py-3">{{$product->id}}</td>
+                       <td class="px-4 py-3">
+                           <div class="bg-contain bg-center "> <img width=50px src="{{$product->photo}}"> </div>
+                       </td>
+                       <td class="px-4 py-3">{{$product->name}}</td>
+                       <td class="px-4 py-3">R${{number_format($product->price, 2)}}</td>
+                       <td class="px-4 py-3">{{$product->estoque}}</td>
+                       <td class="w-10 text-center text-blue-600"><div><a class="px-4 py-3" >Editar</a><a class="px-4 py-3">Deletar</a></div></td>
+                   </tr>
+               @endforeach
                 </tbody>
             </table>
         </div>

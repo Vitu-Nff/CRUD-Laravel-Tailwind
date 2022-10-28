@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -9,7 +10,8 @@ class AdminController extends Controller
 
     public function index()
     {
-        return view('admin.index');
+        $products = Product::all();
+        return view('admin.index',compact('products'));
     }
 
     public function edit($productId = null)
