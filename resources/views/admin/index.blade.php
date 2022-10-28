@@ -19,22 +19,19 @@
                     <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">Nome</th>
                     <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">Valor</th>
                     <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-sm bg-gray-800">Estoque</th>
-                    <th class="w-10 title-font tracking-wider font-medium text-white text-sm bg-gray-800 rounded-tr rounded-br"></th>
+                    <th class="px-4 py-3 title-font tracking-wider font-medium text-white text-center text-sm bg-gray-800 rounded-br">Ações</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td class="px-4 py-3">#1</td>
                     <td class="px-4 py-3">
-                        <img class="rounded"
-                            src="{{ Illuminate\Support\Facades\Storage::disk('public')->url('/logos/h7RLzsHBZxRPucGASDlsyblynv5kJqzJZRSNwLN8.png')}}"
-                            alt=""
-                            width="100"
-                        ></td>
-                    <td class="px-4 py-3">15 GB</td>
-                    <td class="px-4 py-3">Free</td>
-                    <td class="px-4 py-3">Free</td>
-                    <td class="w-10 text-center"></td>
+                        <div class="bg-contain bg-center" style="background-image: url('{{ Illuminate\Support\Facades\Storage::disk("public")->url('/logos/h7RLzsHBZxRPucGASDlsyblynv5kJqzJZRSNwLN8.png')}})"></div>
+                    </td>
+                    <td class="px-4 py-3">Teste</td>
+                    <td class="px-4 py-3">R$99,90</td>
+                    <td class="px-4 py-3">8</td>
+                    <td class="w-10 text-center text-blue-600"><div><a class="px-4 py-3" >Editar</a><a class="px-4 py-3">Deletar</a></div></td>
                 </tr>
                 </tbody>
             </table>

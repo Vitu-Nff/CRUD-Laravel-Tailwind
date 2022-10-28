@@ -10,6 +10,8 @@
     <title>@yield('title', 'Estudando Laravel')</title>
 </head>
 
+<body>
+
 @section('header')
 <header class="text-gray-400 bg-gray-900 body-font">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -31,11 +33,11 @@
 </header>
 @show
 
-<body>
+    <div class="min-h-screen bg-gray-900">
+        @yield('content')
+        @yield('sidebar')
+    </div>
 
-@yield('content')
-
-@yield('sidebar')
 
 @section('footer')
     <footer class="text-gray-400 bg-gray-900 body-font">

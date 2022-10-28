@@ -11,6 +11,10 @@
 </head>
 <body>
 
+<div class="test">
+    <h2>TESTE</h2>
+</div>
+
 @yield('content')
 
 @section('sidebar')
@@ -20,6 +24,8 @@
         </nav>
     </div>
 @show
+
+
 
 @stack('scripts')
 </body>

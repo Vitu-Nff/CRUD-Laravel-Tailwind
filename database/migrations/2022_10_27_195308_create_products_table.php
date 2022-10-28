@@ -17,9 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->text('description');
-            $table->int('price');
-            $table->int('estoque');
-            $table->int('likes');
+            $table->float('price');
+            $table->integer('estoque');
+            $table->integer('likes');
             $table->string('photo');
             $table->timestamps();
         });
