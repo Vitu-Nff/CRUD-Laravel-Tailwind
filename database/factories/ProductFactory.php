@@ -20,8 +20,7 @@ class ProductFactory extends Factory
             'name'=> $this->faker->name,
             'description'=> $this->faker->text(1000),
             'price'=> $this->faker->randomFloat(1, 5, 99),
-            'estoque'=> $this->faker->randomNumber(2, false),
-            'likes'=> $this->faker->randomNumber(3, false),
+            'stock'=> $this->faker->randomNumber(2, false),
             'photo'=>$this->faker->imageUrl(600, 600,null,false,null,true ),
             'thumbnail'=> $this->faker->imageUrl(420, 260,null,false,null,true ),
         ];

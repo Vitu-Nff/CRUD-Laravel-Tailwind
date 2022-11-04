@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+.brl {
+    position: relative;
+    display: block;
+}
+.brl:after {
+    color: #37424a !important;
+    content: "R$";
+    font-size: 16px !important;
+    font-weight: 400;
+    position: absolute;
+
+    display: block;
+    height: 100%;
+    top: 0;
+    left: 10px;
+    line-height: 96px;
+}
+
+.brl input[type="number"] {
+    box-sizing: border-box;
+    padding-left: 30px;
+}
+
 .product_card {
     border-radius: 30px;
     transition: 0.5s;
@@ -35,6 +58,13 @@
     animation: deletedAnimation ease 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+}
+
+.like:active {
+    border-style: solid;
+    border-color: red;
+    border-width: 1px;
+    border-radius: 50%;
 }
 
 @keyframes floatInAnimation {
